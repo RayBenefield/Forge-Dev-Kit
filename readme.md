@@ -18,7 +18,7 @@ request](https://github.com/RayBenefield/Forge-Dev-Kit/pulls).
 | ---:         | :---:   | :---:  | :---:         | :---:         | :---:         | :---:         | :---:    |
 | **Alpha**    |         |        | {ALIVE}       |               | {ALIVE}       |               | {ACTIVE} |
 | **Bravo**    |         |        |               |               |               |               |          |
-| **Charlie**  |         |        | {COLLECATBLE} | {COLLECTABLE} | {COLLECTABLE} | {COLLECTABLE} |          |
+| **Charlie**  |         |        | {COLLECTABLE} | {COLLECTABLE} | {COLLECTABLE} | {COLLECTABLE} |          |
 | **Delta**    |         |        | {DEAD}        |               | {DEAD}        |               |          |
 | **Echo**     |         |        |               |               |               |               |          |
 | **Foxtrot**  |         |        |               |               |               |               |          |
