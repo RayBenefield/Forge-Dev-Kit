@@ -8,3 +8,5 @@ etc. Lots of options (though probably a memory issue)
 be SUPER helpful
  - **Add more conditions to multi** - Having things in Multi like
    Number:Checking could prove to be very very valuable moving forward
+ - **Allow Filtering in Conditions** - Some conditions would be made much
+   easier if we could do filtering to target specific players, or objects
