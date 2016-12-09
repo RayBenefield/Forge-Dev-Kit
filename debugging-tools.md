@@ -66,3 +66,17 @@ lights.
 Even building special objects for debugging can work well. But you may not want
 to overdo it you could end up spending mor etime building tools than actually
 building and spend too much budget on them.
+
+
+## Triggers
+
+SWITCH ALL THE THINGS!!! Seriously though, the easiest way to start debugging
+tasks is to use a terminal or other interactive element. Perhaps you trigger it
+to change a power channel, or you trigger it to send a message, or perhaps even
+trigger the Score Changed action on a given variable. Have different terminals
+for different tasks. Some people may remember prior to the Monitor's Bounty
+update that having too many terminals can create some crazy hassle in keeping
+track of what does what... this no longer has to be the case thanks to
+NavPoints. Tie a NavPoint to your terminal and give it a descriptive name. Keep
+in mind for things like power channels it may be valuable to change the color
+and the name based on when it is on or off.
