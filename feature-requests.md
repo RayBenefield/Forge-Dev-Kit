@@ -6,3 +6,5 @@ etc. Lots of options (though probably a memory issue)
  - **Set the name of a NavPoint with a number** - With as many numbers as we
    have access to now, using NavPoints to visually display those numbers would
 be SUPER helpful
+ - **Add more conditions to multi** - Having things in Multi like
+   Number:Checking could prove to be very very valuable moving forward
