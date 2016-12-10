@@ -66,6 +66,36 @@ if (PlayerDies) {
 | 7   | 23  | 0   | 2     | **[0]** | **[x]** | 1       | **[x]** | 2     | **[0]** | 1       | **[x]** | **[x]** |
 | 7   | 24  | 1   | 2     | 0       | **[x]** | **[1]** | **[x]** | 2     | 0       | **[1]** | **[x]** | **[x]** |
 
+## Memory Chart
+
+|              | Message      | Power          | Global #        | Team # | Player# | Label | Trait    |
+| ---:         | :---:        | :---:          | :---:           | :---:  | :---:   | :---: | :---:    |
+| **Alpha**    |              |                |                 |        |         |       | {ACTIVE} |
+| **Bravo**    |              |                |                 |        |         |       |          |
+| **Charlie**  |              |                | {CURRENT-TURN}  |        |         |       |          |
+| **Delta**    |              |                |                 |        |         |       |          |
+| **Echo**     |              |                |                 |        |         |       |          |
+| **Foxtrot**  |              |                |                 |        |         |       |          |
+| **Golf**     |              | {GAME-ACTIVE}  |                 |        |         |       |          |
+| **Hotel**    | {HEARTBEAT}  |                |                 |        |         |       |          |
+| **India**    | {INITIALIZE} |                |                 |        |         |       |          |
+| **Juliet**   |              |                |                 |        |         |       |          |
+| **Kilo**     |              |                |                 |        |         |       |          |
+| **Lima**     |              |                |                 |        |         |       |          |
+| **Mike**     |              |                | {MAX-TEAM-SIZE} |        |         |       |          |
+| **November** |              |                |                 |        |         |       |          |
+| **Oscar**    |              |                |                 |        | {ORDER} |       |          |
+| **Papa**     |              |                |                 |        |         |       |          |
+| **Quebec**   |              |                |                 |        |         |       |          |
+| **Romeo**    | {ROUND-INIT} | {ROUND-ACTIVE} | {ROUND-NUMBER}  |        |         |       |          |
+| **Sierra**   |              |                |                 | {SIZE} |         |       |          |
+| **Tango**    | {TURN-START} | {TURN-ACTIVE}  | {TURN-NUMBER}   |        |         |       |          |
+| **Uniform**  |              |                |                 |        |         |       |          |
+| **Victor**   |              |                |                 |        |         |       |          |
+| **Whiskey**  |              |                |                 |        |         |       |          |
+| **Xray**     |              |                |                 |        |         |       |          |
+| **Yankee**   |              |                |                 |        |         |       |          |
+| **Zulu**     |              |                |                 |        |         |       |          |
 
 ## Components
 
