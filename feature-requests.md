@@ -25,3 +25,11 @@ able to use filters instead of preset filters like Objects, Players, All
 label's that match our gametype name so that way a map can suppurt multiple
 custom gametypes. So a map could be built to support SpeedFlag, Halo Tactics,
 Stockpile, Headhunter, without different variants.
+ - **Filter for all objects that pass condition** - When doing something like
+   Number Check, I want to be able to access the objects that passed the
+condition. Currently we only have EXTRA. However, EXTRA is only for the
+recently changed object. If this is a Global number that changed, then I don't
+have access to the Object that met the condition. For example, Global Alpha is
+changed to 5, a Number Check discovers that 5 equals this object's number. When
+filtering, EXTRA returns the Global object, NOT the object that had a matching
+number because that number didn't change, the global one did.
