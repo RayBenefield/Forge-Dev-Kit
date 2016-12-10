@@ -20,3 +20,8 @@ numbers like number of this). And when I can use a conditional expression (like
 a filter) I'd like to be able to use any conditional. For example, filters
 being able to use action conditions (like number check) or conditions being
 able to use filters instead of preset filters like Objects, Players, All
+ - **Custom Gametype Label** - Currently we are limited to allowing only one
+   mini-game on a single map effectively. It would be great if we can define
+label's that match our gametype name so that way a map can suppurt multiple
+custom gametypes. So a map could be built to support SpeedFlag, Halo Tactics,
+Stockpile, Headhunter, without different variants.
