@@ -10,3 +10,13 @@ be SUPER helpful
    Number:Checking could prove to be very very valuable moving forward
  - **Allow Filtering in Conditions** - Some conditions would be made much
    easier if we could do filtering to target specific players, or objects
+ - **Save single objects as prefabs** - A lot of usefulness to prefabs is
+   preset settings and scripts, with how complex objects can be it would be
+great to be able to create prefabs out of single objects, especially with the
+more modular scripting system
+ - **UI Consistency** - Anywhere I can use a number, I'd like to be able to use
+   any number (for example action target filtering can only take specific
+numbers like number of this). And when I can use a conditional expression (like
+a filter) I'd like to be able to use any conditional. For example, filters
+being able to use action conditions (like number check) or conditions being
+able to use filters instead of preset filters like Objects, Players, All
