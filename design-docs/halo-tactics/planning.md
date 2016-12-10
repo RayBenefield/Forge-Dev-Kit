@@ -91,7 +91,7 @@ if (PlayerDies) {
 | **Sierra**   |              |                |                 | {SIZE} |         |       |          |
 | **Tango**    | {TURN-START} | {TURN-ACTIVE}  | {TURN-NUMBER}   |        |         |       |          |
 | **Uniform**  |              |                |                 |        |         |       |          |
-| **Victor**   |              |                |                 |        |         |       |          |
+| **Victor**   |              | {VOLATILE}     |                 |        |         |       |          |
 | **Whiskey**  |              |                |                 |        |         |       |          |
 | **Xray**     |              |                |                 |        |         |       |          |
 | **Yankee**   |              |                |                 |        |         |       |          |
@@ -105,10 +105,33 @@ Manages general game events. Initialization on Match Start, Starting the game
 on Round Start, clearing all the things, and sending the heartbeat.
 
 ---
-###### [Scripts](../../prefabs/game-manager.hs.md)
+###### Scripts
+
+| #1 | Match Start|
+| ---| ---|
+|| `POWER` **Game -> Off**|
+|| `SEND` **Initialize**|
+
+| #2 | Round Start| `Round Interrupt` `Always Run`|
+| ---| ---| ---|
+|| `POWER` **Game -> On**|
+
+| #3 | `POWER` Game -> Off `OR` `HEAR` Initialize ||
+| ---| ---| ---|
+|| `NAV` **+Players**| `REMOVE` **+Nothing**|
+|| `CLEAR TRAITS` **+Players**|
+|| `SET FX` **+Players**| `FILTER`  **Default** `FX` **Default**|
+|| `DESPAWN` **+This -GroupSiblings**|
+
+| #4 | `POWER` Game -> On| `Round Interrupt` `Always Run`|
+| ---| ---| ---|
+|| `FORCE SPAWN`|
+
+| #5 | `TIMER` Every 0.1| `Round Interrupt`|
+| ---| ---| ---|
+|| `SEND` **Heartbeat**|
 
 ---
-
 
 ### Turn Manager
 
@@ -117,9 +140,26 @@ Manages the Turn taking system.
 ---
 ###### Scripts
 
-> - Set all turn trackers to 0
-> - Initialize the Turn Length
-> - Send a Turn Heartbeat every X amount of time
+| #1 | `TIMER` Every 4.00| `Round Interrupt`|
+| ---| ---| ---|
+|| `SEND` **Turn-Start**|
+
+| #2 | `POWER` Game -> On| `Round Interrupt` `Always Run`|
+| ---| ---| ---|
+|| `FORCE SPAWN`|
+
+| #3 | `POWER` Game -> Off `OR` `HEAR` Initialize ||
+| ---| ---| ---|
+|| `CHANGE` **Turn-Number**| `SET` **-1**|
+|| `CHANGE` **Current-Turn**| `SET` **-1**|
+|| `DESPAWN` **+This -GroupSiblings**|
+
+| #4 | `HEAR` Turn-Start||
+| ---| ---| ---|
+|| `CHANGE` **Turn-Number**| `INCREMENT`|
+|| `CHANGE` **Volatile**| `SET` **Turn-Number**|
+|| `CHANGE` **Volatile**| `REMAINDER` **Max-Team-Size**|
+|| `CHANGE` **Current-Turn**| `SET` **Volatile**|
 
 ---
 
