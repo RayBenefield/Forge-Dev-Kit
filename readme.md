@@ -14,34 +14,34 @@ discussed amongst the community. An accepted proposal will either be added by a
 contributor, or you can submit your own [pull
 request](https://github.com/RayBenefield/Forge-Dev-Kit/pulls).
 
-|              | Message | Power  | Global #      | Team #        | Player#       | Label         | Trait    |
-| ---:         | :---:   | :---:  | :---:         | :---:         | :---:         | :---:         | :---:    |
-| **Alpha**    |         |        | {ALIVE}       |               | {ALIVE}       |               | {ACTIVE} |
-| **Bravo**    |         |        |               |               |               |               |          |
-| **Charlie**  |         |        | {COLLECTABLE} | {COLLECTABLE} | {COLLECTABLE} | {COLLECTABLE} |          |
-| **Delta**    |         |        | {DEAD}        |               | {DEAD}        |               |          |
-| **Echo**     |         |        |               |               |               |               |          |
-| **Foxtrot**  |         |        |               |               |               |               |          |
-| **Golf**     |         | {GAME} |               |               |               |               |          |
-| **Hotel**    |         |        |               |               |               |               |          |
-| **India**    |         |        |               |               |               |               |          |
-| **Juliet**   |         |        |               |               |               |               |          |
-| **Kilo**     |         |        |               |               |               |               |          |
-| **Lima**     |         |        |               |               |               |               |          |
-| **Mike**     |         |        |               |               |               |               |          |
-| **November** |         |        |               |               |               |               |          |
-| **Oscar**    |         |        |               |               |               |               |          |
-| **Papa**     |         |        | {PLAYER}      |               | {PLAYER}      |               |          |
-| **Quebec**   |         |        |               |               |               |               |          |
-| **Romeo**    | {RESET} |        |               |               |               |               |          |
-| **Sierra**   |         |        |               |               |               |               |          |
-| **Tango**    |         |        | {TEAM}        |               | {TEAM}        |               |          |
-| **Uniform**  |         |        |               |               |               |               |          |
-| **Victor**   |         |        |               |               |               |               |          |
-| **Whiskey**  |         |        |               |               |               |               |          |
-| **Xray**     |         |        |               |               |               | {UI}          |          |
-| **Yankee**   |         |        |               |               |               |               |          |
-| **Zulu**     |         |        |               |               |               |               |          |
+|              | Message     | Power  | Global #      | Team #        | Player#       | Label         | Trait    |
+| ---:         | :---:       | :---:  | :---:         | :---:         | :---:         | :---:         | :---:    |
+| **Alpha**    |             |        | {ALIVE}       |               | {ALIVE}       |               | {ACTIVE} |
+| **Bravo**    |             |        |               |               |               |               |          |
+| **Charlie**  |             |        | {COLLECTABLE} | {COLLECTABLE} | {COLLECTABLE} | {COLLECTABLE} |          |
+| **Delta**    |             |        | {DEAD}        |               | {DEAD}        |               |          |
+| **Echo**     |             |        |               |               |               |               |          |
+| **Foxtrot**  |             |        |               |               |               |               |          |
+| **Golf**     |             | {GAME} |               |               |               |               |          |
+| **Hotel**    | {HEARTBEAT} |        |               |               |               |               |          |
+| **India**    |             |        |               |               |               |               |          |
+| **Juliet**   |             |        |               |               |               |               |          |
+| **Kilo**     |             |        |               |               |               |               |          |
+| **Lima**     |             |        |               |               |               |               |          |
+| **Mike**     |             |        |               |               |               |               |          |
+| **November** |             |        |               |               |               |               |          |
+| **Oscar**    |             |        |               |               |               |               |          |
+| **Papa**     |             |        | {PLAYER}      |               | {PLAYER}      |               |          |
+| **Quebec**   |             |        |               |               |               |               |          |
+| **Romeo**    | {RESET}     |        |               |               |               |               |          |
+| **Sierra**   |             |        |               |               |               |               |          |
+| **Tango**    |             |        | {TEAM}        |               | {TEAM}        |               |          |
+| **Uniform**  |             |        |               |               |               |               |          |
+| **Victor**   |             |        |               |               |               |               |          |
+| **Whiskey**  |             |        |               |               |               |               |          |
+| **Xray**     |             |        |               |               |               | {UI}          |          |
+| **Yankee**   |             |        |               |               |               |               |          |
+| **Zulu**     |             |        |               |               |               |               |          |
 
 
 ## Memory Explanations
