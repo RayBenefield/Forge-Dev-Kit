@@ -163,9 +163,18 @@ Manages the Turn taking system.
 
 ---
 
+### Team Manager
+
+Manages the Teams in the game.
+
+---
+###### Scripts
+
+> - On Initialize set the Max-Team-Size to -1
+
 ### Player Manager
 
-Manages the Turn taking system.
+Manages the Players in the game.
 
 ---
 ###### Scripts
