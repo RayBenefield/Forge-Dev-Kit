@@ -1,6 +1,9 @@
 # Round Manager
 
-Manages all round tracking including a relative round based on spawn order.
+Manages all round tracking including a relative round based on spawn order. Set
+the **Spawn Order** on this object to determine when the relative round cycles.
+For example, if the **Spawn Order** is to 3, the **Current-Round** will be set
+to 0 -> 1 -> 2 -> 0 -> 1... etc.
 
 
 ## Configuration

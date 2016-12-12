@@ -1,9 +1,9 @@
 # Round Spawner
 
-Progresses the Spawn Order of ALL players between 1 and `THIS` **Spawn Order**
-every single round. Round 1 **Spawn Order** is 1, Round 2 **Spawn Order** is 2,
-etc.  This allows developers to create maps that happen in different locations
-in each round.
+Progresses the Spawn Order of ALL players between 1 and the `Round Manager`
+**Spawn Order** every single round. Round 1 **Spawn Order** is 1, Round 2
+**Spawn Order** is 2, etc.  This allows developers to create maps that happen
+in different locations in each round.
 
 ## Configuration
 
