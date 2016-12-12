@@ -68,34 +68,34 @@ if (PlayerDies) {
 
 ## Memory Chart
 
-|              | Message      | Power          | Global #        | Team # | Player# | Label | Trait    |
-| ---:         | :---:        | :---:          | :---:           | :---:  | :---:   | :---: | :---:    |
-| **Alpha**    |              |                |                 |        |         |       | {ACTIVE} |
-| **Bravo**    |              |                |                 |        |         |       |          |
-| **Charlie**  |              |                | {CURRENT-TURN}  |        |         |       |          |
-| **Delta**    |              |                |                 |        |         |       |          |
-| **Echo**     |              |                |                 |        |         |       |          |
-| **Foxtrot**  |              |                |                 |        |         |       |          |
-| **Golf**     |              | {GAME-ACTIVE}  |                 |        |         |       |          |
-| **Hotel**    | {HEARTBEAT}  |                |                 |        |         |       |          |
-| **India**    | {INITIALIZE} |                |                 |        |         |       |          |
-| **Juliet**   |              |                |                 |        |         |       |          |
-| **Kilo**     |              |                |                 |        |         |       |          |
-| **Lima**     |              |                |                 |        |         |       |          |
-| **Mike**     |              |                | {MAX-TEAM-SIZE} |        |         |       |          |
-| **November** |              |                |                 |        |         |       |          |
-| **Oscar**    |              |                |                 |        | {ORDER} |       |          |
-| **Papa**     |              |                |                 |        |         |       |          |
-| **Quebec**   |              |                |                 |        |         |       |          |
-| **Romeo**    | {ROUND-INIT} | {ROUND-ACTIVE} | {ROUND-NUMBER}  |        |         |       |          |
-| **Sierra**   |              |                |                 | {SIZE} |         |       |          |
-| **Tango**    | {TURN-START} | {TURN-ACTIVE}  | {TURN-NUMBER}   |        |         |       |          |
-| **Uniform**  |              |                |                 |        |         |       |          |
-| **Victor**   |              | {VOLATILE}     |                 |        |         |       |          |
-| **Whiskey**  |              |                |                 |        |         |       |          |
-| **Xray**     |              |                |                 |        |         |       |          |
-| **Yankee**   |              |                |                 |        |         |       |          |
-| **Zulu**     |              |                |                 |        |         |       |          |
+|              | Message      | Power          | Global #        | Team # | Player# | Label | Trait   |
+| ---:         | :---:        | :---:          | :---:           | :---:  | :---:   | :---: | :---:   |
+| **Alpha**    |              |                |                 |        |         |       |         |
+| **Bravo**    |              |                |                 |        |         |       |         |
+| **Charlie**  |              |                | Current-Turn    |        |         |       |         |
+| **Delta**    |              |                |                 |        |         |       | Dormant |
+| **Echo**     |              |                |                 |        |         |       |         |
+| **Foxtrot**  |              |                |                 |        |         |       |         |
+| **Golf**     |              | Game-Active    |                 |        |         |       |         |
+| **Hotel**    | {HEARTBEAT}  |                |                 |        |         |       |         |
+| **India**    | {INITIALIZE} |                |                 |        |         |       |         |
+| **Juliet**   |              |                |                 |        |         |       |         |
+| **Kilo**     |              |                |                 |        |         |       |         |
+| **Lima**     |              |                |                 |        |         |       |         |
+| **Mike**     |              |                | {MAX-TEAM-SIZE} |        |         |       |         |
+| **November** |              |                |                 |        |         |       |         |
+| **Oscar**    |              |                |                 |        | {ORDER} |       |         |
+| **Papa**     |              |                |                 |        |         |       |         |
+| **Quebec**   |              |                |                 |        |         |       |         |
+| **Romeo**    | {ROUND-INIT} | {ROUND-ACTIVE} | {ROUND-NUMBER}  |        |         |       |         |
+| **Sierra**   |              |                |                 | {SIZE} |         |       |         |
+| **Tango**    | {TURN-START} | {TURN-ACTIVE}  | {TURN-NUMBER}   |        |         |       |         |
+| **Uniform**  |              |                |                 |        |         |       |         |
+| **Victor**   |              | {VOLATILE}     |                 |        |         |       |         |
+| **Whiskey**  |              |                |                 |        |         |       |         |
+| **Xray**     |              |                |                 |        |         |       |         |
+| **Yankee**   |              |                |                 |        |         |       |         |
+| **Zulu**     |              |                |                 |        |         |       |         |
 
 ## Components
 
@@ -172,5 +172,27 @@ Manages the Turn taking system.
 
 > - If My Turn then set as Active
 > - If Not My Turn then Remove Active Trait
+
+| #1| `CHECK` Max-Team-Size > 0||
+| ---| ---| ---|
+|| `CHANGE` **This**| `SET` **25**|
+|| `CHANGE` **This**| `SET` **1**|
+
+| #2| `CHECK` This < Max-TeamSize||
+| ---| ---| ---|
+|| `ORDER CHANGE` **+Players +This.Team +Order[0] +Random[1]**| `SET` **This**|
+|| `CHANGE` **This**| `INCREMENT`|
+
+| #3| `CHECK` Current-Turn > -1||
+| ---| ---| ---|
+|| `ORDER CHANGE` **This**| `SET` **Current-Turn**|
+|| `APPLY TRAIT` **+Players -This.Order**| `SET` **Dormant**|
+|| `CLEAR TRAITS` **+Players +This.Order**|
+
+| #4| `CHECK` Current-Turn > -1||
+| ---| ---| ---|
+|| `ORDER CHANGE` **This**| `SET` **Current-Turn**|
+|| `NAV` **+Players +This.Team**| `TARGET` **+Players +This.Order**| `COLOR` **Active** `SAY` **Active**|
+|| `CLEAR NAV` **+Players +This.Team**| `TARGET` **+Players +This.Order**|
 
 ---
