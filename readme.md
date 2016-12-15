@@ -8,6 +8,15 @@ refactoring, decoupling, modularity, debugging, testing, etc. have become more
 important than ever.
 
 
+## Table of Contents
+
+ - [Overview of Goals](#overview-of-goals)
+ - [Design Documents](#design-documents)
+ - [Prefabs](#prefabs)
+ - [Standards](#standards)
+ - [Documentation](#documentation)
+ - [Collaborators](#collaborators)
+
 ## Overview of Goals
 
 The FDK hopes to achieve a lot by bringing together the community in an open
@@ -46,12 +55,48 @@ channels, etc.)
 Gametype options, etc.)
 
 
-## Who is working on this?
+## Design Documents
+
+These are design docunents for FDK approved gametypes:
+
+ - [Fury](design-docs/fury.hs.md)
+
+
+## Prefabs
+
+These are the FDK tools to assist in creating gametypes:
+
+ - [Game Manager](prefabs/game-manager.hs.md)
+ - [Round Manager](prefabs/round-manager.hs.md)
+ - [Round Spawner](prefabs/round-spawner.hs.md)
+
+
+## Standards
+
+These are the documents that define what the standards of the FDK are:
+
+ - [Script Template](standards/haloscript-template.hs.md)
+ - [Universal Memory Chart](standards/universal-memory-chart.hs.md)
+ - [Gametype Checklist](standards/gametype-checklist.hs.md)
+
+
+## Documentation
+
+These are reference documents describing the mechanics of Halo Forge and its
+scripting system:
+
+ - [Memory](docs/memory.hs.md)
+ - [Debugging](docs/debugging.hs.md)
+ - [Patterns](docs/patterns.hs.md)
+ - [Refactoring](docs/refactoring.hs.md)
+
+
+## Collaborators
 
 |[![Ray Benefield](http://gravatar.com/avatar/e931b13306ea1022549766266727f789?s=144)](https://github.com/RayBenefield) |
 |:---:|
 | [Ray Benefield](https://github.com/RayBenefield) |
-| [XBL GT: `Ray Benefield`](https://github.com/RayBenefield) |
+| [XBL GT: `Ray Benefield`](https://account.xbox.com/en-US/Profile?GamerTag=Ray%20Benefield) |
 | Creative Force Founder |
 | Community Cartographer |
 | [Solution Architect](https://en.wikipedia.org/wiki/Solution_architect) |
