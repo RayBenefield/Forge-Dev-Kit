@@ -33,3 +33,7 @@ have access to the Object that met the condition. For example, Global Alpha is
 changed to 5, a Number Check discovers that 5 equals this object's number. When
 filtering, EXTRA returns the Global object, NOT the object that had a matching
 number because that number didn't change, the global one did.
+ - **Filter on the Spawn Action** - We currently have the ability to despawn
+   another object using filters, but we cannot spawn other objects using
+filters meaning that we can't abstract the act of spawning objects, they have
+to manage their own spawning
