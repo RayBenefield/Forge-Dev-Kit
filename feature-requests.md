@@ -42,3 +42,8 @@ to manage their own spawning
 abstract this it would be great to be able to use the `activator` or `this`
 team to keep those conditions generic and not have them be changed or setup for
 every single team
+ - **Control over what gets displayed in the combat log** - It is crucial for
+   games to be able to update the combat log with significant events in the
+same way that we can control waypoints, scoring, voice overs, etc. Perhaps
+using a similar system to navpoints where we have a limit of verbs that we can
+use.
