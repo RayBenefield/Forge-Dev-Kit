@@ -104,6 +104,7 @@ These are the documents that define what the standards of the FDK are:
  - [Script Template](standards/haloscript-template.hs.md)
  - [Universal Memory Chart](standards/universal-memory-chart.hs.md)
  - [Gametype Checklist](standards/gametype-checklist.hs.md)
+ - [Gametype Package](standards/gametype-package.hs.md)
 
 
 ## Documentation
