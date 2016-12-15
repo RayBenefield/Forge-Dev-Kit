@@ -37,3 +37,8 @@ number because that number didn't change, the global one did.
    another object using filters, but we cannot spawn other objects using
 filters meaning that we can't abstract the act of spawning objects, they have
 to manage their own spawning
+ - **Use `This: Team` or `Activator: Team` in Conditions** - Right now we have
+   to hardcode the team that we are working with into our script conditions. To
+abstract this it would be great to be able to use the `activator` or `this`
+team to keep those conditions generic and not have them be changed or setup for
+every single team
