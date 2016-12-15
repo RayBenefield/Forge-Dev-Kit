@@ -50,7 +50,12 @@ spawns), they can be a useful additional **Number** slot.
 Another cousin of **Numbers**. Limits are currently unknown. Using this as a
 memory slot is very risky as the core game system uses the score to indicate
 losses or wins. Be very aware when you use this as a Memory slot. In a pinch,
-this can serve a similar purpose as a **Message** when it changes.
+this can serve a similar purpose as a **Message** when it changes. 
+
+Since score also has a built in UI display, it can be used to display other 
+variables, such as timers, etc., by having it mirror them. Score only displays 
+for 2 teams at a time in the HUD, and can only be modified or shown for teams
+that are present in the game.
 
 ### Labels
 
