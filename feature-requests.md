@@ -47,3 +47,10 @@ every single team
 same way that we can control waypoints, scoring, voice overs, etc. Perhaps
 using a similar system to navpoints where we have a limit of verbs that we can
 use.
+ - **Use any Number data to set the Text on a NavPoint** - We have to do a lot
+   of crazy work arounds and scripts to be able to properly set the waypoint to
+our desired number. It would be great not to have to do this.
+ - **Set Color on NavPoint based on Team Data** - Another thing that costs a
+   lot of scripts are having to use different scripts for different colors,
+that actually relate to a team. It would be much more valuable to be able to
+set that color based on a team filter or something.
