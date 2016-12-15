@@ -11,6 +11,7 @@ important than ever.
 ## Table of Contents
 
  - [Overview of Goals](#overview-of-goals)
+ - [Inspiration](#inspiration)
  - [Design Documents](#design-documents)
  - [Prefabs](#prefabs)
  - [Standards](#standards)
@@ -53,6 +54,31 @@ channels, etc.)
  - Provide reason for 343 to continue supporting and improving the User
    Generated Content capabilities of Halo (e.g. more Forge support, more
 Gametype options, etc.)
+
+
+## Inspiration
+
+> A good friend of mine, and fellow team member on Creative Force, Carson Barry
+> (Captain Punch), proposed a project internally for Creative Force. That
+> project was called **Latchkey**, which was to comprise of a bunch of
+> components that could be used together to construct complex gametypes. If you
+> have ever played Halo: Reach Invasion, it was like that on steroids. The goal
+> was to introduce new mechanics, objectives, etc. to allow the creation of
+> whatever you wanted.
+
+> With that being worked on right now with Invasion as the first end product,
+> using a bunch of objectives and mechanics, I decided that it would probably be
+> really good if there were standards that would make this an even easier
+> endeavor. With the new scripting system, there was a lot of potential for
+> things to go wrong and not work together, but there was also a lot of potential
+> for things to go very right and actually make a project like this easier.
+
+> So a huge thank you to Carson for leading the way and paving the path of what
+> will be a huge community initiative to stay in sync with each other and make
+> gametype development in Halo Forge that much easier.
+
+> **- Ray Benefield**
+
 
 
 ## Design Documents
