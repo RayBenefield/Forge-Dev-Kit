@@ -12,10 +12,11 @@ important than ever.
 
  - [Overview of Goals](#overview-of-goals)
  - [Inspiration](#inspiration)
- - [Design Documents](#design-documents)
- - [Prefabs](#prefabs)
  - [Standards](#standards)
  - [Documentation](#documentation)
+ - [Tests](#tests)
+ - [Design Documents](#design-documents)
+ - [Prefabs](#prefabs)
  - [Collaborators](#collaborators)
 
 ## Overview of Goals
@@ -80,23 +81,6 @@ Gametype options, etc.)
 > **- Ray Benefield**
 
 
-
-## Design Documents
-
-These are design docunents for FDK approved gametypes:
-
- - [Fury](design-docs/fury.hs.md)
-
-
-## Prefabs
-
-These are the FDK tools to assist in creating gametypes:
-
- - [Game Manager](prefabs/game-manager.hs.md)
- - [Round Manager](prefabs/round-manager.hs.md)
- - [Round Spawner](prefabs/round-spawner.hs.md)
-
-
 ## Standards
 
 These are the documents that define what the standards of the FDK are:
@@ -116,6 +100,30 @@ scripting system:
  - [Debugging](docs/debugging.hs.md)
  - [Patterns](docs/patterns.hs.md)
  - [Refactoring](docs/refactoring.hs.md)
+
+
+## Tests
+
+These are tests you can load up in-game with information, observations, and end
+results:
+
+ - [Timer Pattern](tests/timer-pattern.hs.md)
+
+
+## Design Documents
+
+These are design docunents for FDK approved gametypes:
+
+ - [Fury](design-docs/fury.hs.md)
+
+
+## Prefabs
+
+These are the FDK tools to assist in creating gametypes:
+
+ - [Game Manager](prefabs/game-manager.hs.md)
+ - [Round Manager](prefabs/round-manager.hs.md)
+ - [Round Spawner](prefabs/round-spawner.hs.md)
 
 
 ## Collaborators
