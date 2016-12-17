@@ -16,19 +16,18 @@ respawn at its original location.
 | #| `CHECK` **Game -> On**|
 | ---| ---|
 || `FORCE SPAWN`|
+|| `CHANGE` **Turn -> On**|
 
 | #| `CHECK` **Game -> Off**|
 | ---| ---|
 || `DESPAWN`|
 
-| #| `TIMER` **15.00**|
-| ---| ---|
-|| `CHANGE` **Turn -> On**|
-
 | #| `CHECK` **Turn -> On**|
 | ---| ---|
 || `WAIT` **5.00**|
 || `CHANGE` **Turn -> Off**|
+|| `WAIT` **10.00**|
+|| `CHANGE` **Turn -> On**|
 
 ---
 
@@ -52,7 +51,7 @@ respawn at its original location.
 
 ### Weapon
 
-> Label: **[Weapon]**
+> - Label: **[Weapon]**
 
 | #| `CHECK` **This** >= 0|
 | ---| ---|
@@ -62,87 +61,73 @@ respawn at its original location.
 
 ### Cache (Powerup)
 
- > Label: **[Powerup]**
- > Spawn Order = Initially Cost, After **Initialization** ID
- > Boundary
+ > - Label: **[Powerup]**
+ > - Spawn Order = After **Initialization** ID
+ > - Boundary
 
-| #| `HEAR` **Initialize**||
+| #| `CHECK` **This** > 0| `ALWAYS RUN`|
 | ---| ---| ---|
-|| `CHANGE` **+[Weapon]**| `SET` **-1**|
-|| `DESPAWN`|
+|| `ORDER CHANGE` **+This**| `SET` **This**|
+|| `ORDER CHANGE` **<li>+This.Boundary <li>+[Weapon] <li>+[TeamManager] <li>+[NavManager]**| `SET` **This.Order**|
+|| `CHANGE` **+This.Order +[Weapon]**| `SET` **-1**|
+|| `DESPAWN` **+This.Order +[Weapon]**|
+|| `CHANGE` **This.Order +[NavManager]**| `SET` **0**|
 
-| #| `CHECK` **This** < 0| `ALWAYS RUN`|
-| ---| ---| ---|
-|| `CHANGE` **Volatile**| `SET` **This.Order**|
-|| `ORDER CHANGE` **+This**| `MULTIPLY` **-1**|
-|| `ORDER CHANGE` **+This.Boundary +[Weapon] +[TeamManager] +[NavManager]**| `SET` **This.Order**|
-|| `CHANGE` **This**| `SET` **Volatile**|
-
-| #| `CHECK` **Game -> Off**|
-| ---| ---|
-|| `DESPAWN`|
-
-| #| `CHECK` **Turn -> Off**|
+| #| `CHECK` **Game -> Off** `OR` `CHECK` **Turn -> Off** `OR` `HEAR` **Initialize**|
 | ---| ---|
 || `DESPAWN`|
 
 |# | `DESPAWN`|
 | ---| ---|
-|| `DESPAWN` **+This.Order**|
+|| `DESPAWN` **+This.Order -[Weapon]**|
 
 | #| `CHECK` **Turn -> On**| `ALWAYS RUN`|
 | ---| ---| ---|
 || `FORCE SPAWN`|
 
-| #| `INTERACT`|
-| ---| ---|
-|| `SEND` **Activated**| `TRANSFER` **This**|
+| #| `INTERACT`||
+| ---| ---| ---|
+|| `CHANGE` **<li>This.Order <li>+Activator.Team <li>+[TeamManager]**| `DECREMENT` **-1**|
 
 ---
 
 ### Cache Team Manager
 
- > Label: **[TeamManager]**
- > Spawn Order = After **Initialization** ID
- > **This** = Remaining
+ > - Team
+ > - Label: **[TeamManager]**
+ > - Spawn Order = After **Initialization** ID
+ > - **This** = Remaining
 
-| #| `HEAR` **Initialize**||
-| ---| ---| ---|
-|| `CHANGE` **This**| `SET` **0**|
-
-| #| `CHECK` **Turn -> On**||
-| ---| ---| ---|
+| #| `CHECK` **Turn -> On**|
+| ---| ---|
 || `FORCE SPAWN`|
 
 | #| `SPAWN`||
 | ---| ---| ---|
-|| `CHANGE` **+This.Order +[NavManager]**| `SET` **This**|
-
-| #| `HEAR` **Activated**||
-| ---| ---| ---|
-|| `CHANGE` **This**| `DECREMENT` **1**|
+|| `CHANGE` **<li>+This.Order <li>+This.Team <li>+[NavManager]**| `SET` **This**|
 
 | #| `CHECK` **This** < 0||
 | ---| ---| ---|
-|| `CHANGE` **+This**| `SET` **[PowerUp]**|
-|| `CHANGE` **+This.Order +[Weapon]**| `SET` **-1**|
+|| `CHANGE` **+This**| `SET` **[Weapon.Order]**|
 || `DESPAWN` **+This.Order +[Weapon]**|
 || `CHANGE` **+This.Order +[Weapon]**| `SET` **1**|
+|| `CHANGE` **+[Weapon]**| `SET` **-1**|
 
 ---
 
 ### Nav Manager
 
-> Label: **[NavManager]**
+ > - Team
+ > - Label: **[NavManager]**
 
-| #| `HEAR` **Urgent**|||
-| ---| ---| ---| ---|
+| #| `HEAR` **Urgent**||
+| ---| ---| ---|
 || `CHANGE` **Volatile**| `SET` **This**|
 || `CHANGE` **This**| `SET` **-1**|
 || `CHANGE` **This**| `SET` **Volatile**|
 
-| #| `DESPAWN`|||
-| ---| ---| ---| ---|
+| #| `DESPAWN`||
+| ---| ---| ---|
 || `NAV` **+Players + This.Team**| `REMOVE` **+This**|
 || `CHANGE` **This**| `SET` **-1**|
 
