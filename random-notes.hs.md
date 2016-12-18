@@ -1,0 +1,4 @@
+ - Weapon Pickup disabled still allows you to pickup ammo
+ - Weapon Dropping disabled still drops grenades
+ - Respawning with no spawn point that matches your spawn order will reset your spawn order to 255
+ - Spawn Order cannot be changed while dead
