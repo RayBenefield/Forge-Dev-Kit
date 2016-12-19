@@ -190,3 +190,14 @@ Round-Time 0.0
  >     - **Location**: Random
  > - **Score Frequency** - Immediate
  > - **Hold To Score Duration** - Not Required
+
+#### Headhunter
+
+ > - **Objective 1** - Skulls
+ >     - **Ownership**: Team
+ >     - **Location**: Carried
+ > - **Objective 2** - Zones
+ >     - **Ownership**: Neutral
+ >     - **Location**: Random
+ > - **Score Frequency** - Immediate
+ > - **Hold To Score Duration** - Not Required
