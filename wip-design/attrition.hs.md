@@ -2,19 +2,19 @@
 
 Rather than weapons spawning on the map, they are replaced by weapon caches. In
 order to spawn a weapon you must pay for the weapon by activating the cache
-until it is ready. When the cache is ready, the next time you activate it will
+until it is ready. When the cache is ready, the next time you activate it, it will
 cause the weapon to spawn.
 
 There can only be one weapon from each cache on the map at a single moment. If
-the weapon is spawned while the weaponp is on the field, it will despawn, and
-respawn at its original location.
+the weapon is spawned while the weapon is on the field, it will despawn, and
+respawn at its original location where it was activated.
 
 ## Components
 
 ### Turn Manager
 
-| #| `CHECK` **Game -> On**|
-| ---| ---|
+| #| `CHECK` **Game -> On**| `ALWAYS RUN`|
+| ---| ---| ---|
 || `FORCE SPAWN`|
 || `CHANGE` **Turn -> On**|
 
@@ -52,10 +52,12 @@ respawn at its original location.
 ### Weapon
 
 > - Label: **[Weapon]**
+> - Spawn Order: Cost of Weapon initially, After **Initialization** ID
 
-| #| `CHECK` **This** >= 0|
-| ---| ---|
-|| `SPAWN`|
+| #| `HEAR` **Weapon**| `ALWYAS RUN`|
+| ---| ---| ---|
+|| `FORCE SPAWN`|
+|| `DESPAWN` **+[Weapon] -Activator.Order**||
 
 ---
 
@@ -65,13 +67,17 @@ respawn at its original location.
  > - Spawn Order = After **Initialization** ID
  > - Boundary
 
+| #| `CHECK` **This** < 0| `ALWAYS RUN`|
+| ---| ---| ---|
+|| `CHANGE` **Volatile**| `SET` **This**|
+|| `CHANGE` **Volatile**| `Multiply` **-1**|
+|| `ORDER CHANGE` **<li>+This.Boundary <li>+[Weapon] <li>+[TeamManager] <li>+[NavManager] <li>+This**| `SET` **Volatile**|
+|| `CHANGE` **This**| `SET` **+This.Boundary +[Weapon] -> Order**|
+
 | #| `CHECK` **This** > 0| `ALWAYS RUN`|
 | ---| ---| ---|
-|| `ORDER CHANGE` **+This**| `SET` **This**|
-|| `ORDER CHANGE` **<li>+This.Boundary <li>+[Weapon] <li>+[TeamManager] <li>+[NavManager]**| `SET` **This.Order**|
-|| `CHANGE` **+This.Order +[Weapon]**| `SET` **-1**|
 || `DESPAWN` **+This.Order +[Weapon]**|
-|| `CHANGE` **This.Order +[NavManager]**| `SET` **0**|
+|| `CHANGE` **This.Order +[NavManager] +[TeamManager]**| `SET` **0**|
 
 | #| `CHECK` **Game -> Off** `OR` `CHECK` **Turn -> Off** `OR` `HEAR` **Initialize**|
 | ---| ---|
@@ -98,8 +104,8 @@ respawn at its original location.
  > - Spawn Order = After **Initialization** ID
  > - **This** = Remaining
 
-| #| `CHECK` **Turn -> On**|
-| ---| ---|
+| #| `CHECK` **Turn -> On**| `ALWAYS RUN`|
+| ---| ---| ---|
 || `FORCE SPAWN`|
 
 | #| `SPAWN`||
@@ -110,8 +116,7 @@ respawn at its original location.
 | ---| ---| ---|
 || `CHANGE` **+This**| `SET` **[Weapon.Order]**|
 || `DESPAWN` **+This.Order +[Weapon]**|
-|| `CHANGE` **+This.Order +[Weapon]**| `SET` **1**|
-|| `CHANGE` **+[Weapon]**| `SET` **-1**|
+|| `SEND` **[Weapon]**|
 
 ---
 
