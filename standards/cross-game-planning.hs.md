@@ -201,3 +201,53 @@ Round-Time 0.0
  >     - **Location**: Random
  > - **Score Frequency** - Immediate
  > - **Hold To Score Duration** - Not Required
+
+
+### Conventions
+
+ - The **Local Variable** or the **Spawn Order** on an objective
+     - [default: **Local Variable**] Is the dynamic team that it belongs to
+       (static team is tied into the object's team value)
+     - [default: **Spawn Order**] Is the value it is worth when scoring
+     - The order number it spawns in a sequence
+     - How many of its partner objective is required to score
+ - **Spawn Order** is used for number configuration for anything that isn't a
+   spawn point or player
+
+### Components
+
+#### Team Tagger
+
+The objective sends a **Tag/Team** message and the Team. Tagger responds by
+setting the sender's number as the respective team.
+
+ - **Team** - 1 for each team
+ - **Spawn Order** - Number for team (1 Red, 2 Blue, etc.)
+ - **Color** - User <Team-Number> (User 1, User 2, User 3, etc.)
+
+`Team Tagger`
+
+| #| `HEAR` **Tag-Team**||
+| ---| ---| ---|
+|| `CHANGE` **This**| `SET` **This.Order**|
+|| `CHANGE` **This**| `MULTIPLY` **<li>+Activator.Boundary <li>+This.Team <li>-Dead <li>+First -> Count**|
+|| `CHANGE` **Activator**| `INCREMENT` **This**|
+
+`Object calling the tagger`
+
+| #| `PLAYERS ENTERS/EXITS/IN`||
+| ---| ---| ---|
+|| `CHANGE` **This**| `SET` **0**|
+|| `SEND` **Tag-Team**|
+
+
+#### Objective Valuer
+
+On a score message the valuer scrolls through any object with its two objective
+type labels on it and then sets the scorer's number to the value.
+
+
+#### Team Scorer
+
+When the team scorer's number is set it adds the number to this team's score
+and then reset to 0.
