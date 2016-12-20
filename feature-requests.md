@@ -54,3 +54,16 @@ our desired number. It would be great not to have to do this.
    lot of scripts are having to use different scripts for different colors,
 that actually relate to a team. It would be much more valuable to be able to
 set that color based on a team filter or something.
+ - **Change Team action** - It would be extremely helpful for all gametype to
+   be able to change the team of an object with an action. Then we can do
+things like assign ownership for scoring for a Hill or capture strongholds and
+label them for the team.
+ - **Implicit values translation** - There are several different types of data
+   that can be converted to other types. A Team, for example, could be the
+equivalent of a Red Color or number of 1. Being able to use these values in
+things like Number Check, Number Change, Spawn Order Change, NavPoint, Color
+Change, etc. would enable a lot of flexibility.
+ - **Player/Team/Object Serialization** - One of the most difficult things to
+   do is to keep track of the exact player you are working on. If you setup a
+player as a VIP, it would be nice to be able to store that Player's ID in a
+Number channel, and then reference it in a Filter.
