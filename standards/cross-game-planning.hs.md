@@ -243,8 +243,11 @@ setting the sender's number as the respective team.
 
 #### Objective Valuer
 
-On a score message the valuer scrolls through any object with its two objective
-type labels on it and then sets the scorer's number to the value.
+On an event the valuer scrolls through any object with its two objective type
+labels on it and then sets the scorer's number to the value. For example, for
+Oddball on the 1 second timer, grab all of the objects with a Label of Ball and
+Player, for each object change the Number of the Team Scorer to the Spawn Order
+of the object.
 
 
 #### Team Scorer
