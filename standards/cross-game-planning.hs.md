@@ -254,3 +254,13 @@ of the object.
 
 When the team scorer's number is set it adds the number to this team's score
 and then reset to 0.
+
+##### Options
+
+ - Objectives with two labels send score message so their spawn order can be
+   used for value
+ - Get count of everything with the two labels, loop through them to trigger a
+   score based on spawn order (marking as scored), then clearing the scored
+marker
+ - Change the score channels, to trigger a change that displays updated score
+ - Use object local variables on scorer to add value
