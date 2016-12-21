@@ -119,3 +119,8 @@ things that aren't the last action/script, copying an entire script from one
 object to another, etc. would be immensely useful. While in the menu, there are
 a lot of buttons that aren't used, and utilizing them for things like delete,
 or copy/paste, would be a god send.
+ - **Nested Groups** - With the power of the new action filtering system and
+   the Parent/Sibling relationship, having nested groups would prove extremely
+powerful. Being able to access the siblings of one object, while another object
+acts as the parent to other objects would allow for some very useful
+abstractions
