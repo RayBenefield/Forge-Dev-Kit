@@ -73,3 +73,49 @@ handle things based on whether the object matched ALL of the labels, not just
 one of the labels on the current object. This would allow us to create
 combination based prefabs for when an object is both labeled as an Objective
 AND an Zone for instance.
+ - **Access Game Values using an Action Filter** - Currently we can only access
+   a game value of an entity that is labeled as **THIS** or **ACTIVATOR**, and
+it would be FAR more useful to be able to say pull out the spawn value of the
+group parent.
+ - **Use Spawn Order in conditions like Number Check** - Spawn order has proven
+   to be a powerful tool for configuration, as such it would be extremely handy
+to be able to use it in conditions.
+ - **Two Variables for mathematic operators** - Currently the system takes two
+   variables, the variable you are changing and the modifier. This creates an
+equation of `A = A Operator B` or `A += B`. A lot of work is done to do `A = B
+Operator C` or `A = B + C`, and it would would be extremely valuable to have
+two source values that set the variable.
+ - **Set default value for Object local variable** - Currently all objects have
+   their local object scope variable default to 0 and it would be incredibly
+useful for configuration sake to be able to set that value alongside Spawn
+Order.
+ - **Rename Spawn Order** - Honesly Spawn Order has grow in its usage from
+   determining where players spawn, and instead determining anything that can
+be represented by a number. Limits, Values, Order, ID, Grouping, etc.
+ - **Ability to track the Boundary of other objects** - I'd like to be able to
+   abstract essentially any event that could happen on another object. Boundary
+in particular would be useful. In order for this to work properly we would need
+to have action filtering in conditions, so we can say Boundary Check, This
+object's Group Parent, Enter, Player (or any other action filter)
+ - **Ability to set time based values with Number variables** - In terms of
+   configuration, I would love to be able to access spawn order or local object
+variables to be able to set the wait time or the round time, or the timer
+delay/interval, etc.
+ - **Player/Team scripts** - It would be incredibly useful to be able to have
+   scripts automatically applied to each player or each team. For example, a
+spawn script on a player that would automatically assign them a random number.
+ - **Follow action** - Move offset is handy for a single movement, but a lot of
+   the time we want to be able to follow and we have to manually do this
+through heartbeats and moveoffset. It would be incredibly useful to just action
+filter an object to follow, with a positional offset.
+ - **More configuration settings per object available at the top level
+   properties** - The Local object variable and spawn order are IMMENSELY
+powerful for abstraction purposes. More variable locations on a per object
+basis would allow more fine grained control over objects and would allow us to
+avoid jumping hoops for certain situations.
+ - **Script order/location/deleting/copying/pasting management** - Managing
+   scripts is a hassle in the UI. The ability to re-order scripts, remove
+things that aren't the last action/script, copying an entire script from one
+object to another, etc. would be immensely useful. While in the menu, there are
+a lot of buttons that aren't used, and utilizing them for things like delete,
+or copy/paste, would be a god send.
