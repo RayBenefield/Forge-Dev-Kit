@@ -124,3 +124,6 @@ or copy/paste, would be a god send.
 powerful. Being able to access the siblings of one object, while another object
 acts as the parent to other objects would allow for some very useful
 abstractions
+ - **Name Objects** - Please let us name objects for organization sake. These
+   names don't have to show up in game outside of forge, but we definitely need
+a way to keep track of objects.
