@@ -67,3 +67,9 @@ Change, etc. would enable a lot of flexibility.
    do is to keep track of the exact player you are working on. If you setup a
 player as a VIP, it would be nice to be able to store that Player's ID in a
 Number channel, and then reference it in a Filter.
+ - **[Action Filter] This:Labels ALL** - For configuration sake for re-usable
+   prefabs it would be amazing helpful to have an action filter that would
+handle things based on whether the object matched ALL of the labels, not just
+one of the labels on the current object. This would allow us to create
+combination based prefabs for when an object is both labeled as an Objective
+AND an Zone for instance.
