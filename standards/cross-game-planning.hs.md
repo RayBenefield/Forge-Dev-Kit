@@ -270,7 +270,7 @@ probably use the [team-include] and [ffa-include] labels.
 | #| `HEAR` **Score**||
 | ---| ---| ---|
 || `CHANGE` **This**| `SET` **This.Order**|
-|| `CHANGE` **This**| `MULTIPLY` **+This.Boundary +This.Labels +First -> Count**|
+|| `CHANGE` **This**| `MULTIPLY` **+Activator.Boundary +This.Labels +First -> Count**|
 || `CHANGE` **+This +Group.Parent +Group.Siblings +[Scoring]**| `SET` **This**|
 || `CHANGE` **This**| `SET` **0**|
 
@@ -284,6 +284,12 @@ probably use the [team-include] and [ffa-include] labels.
 | #| `CHECK` **This < 0**|
 | ---| ---|
 || `DESPAWN` **+This +Group.Parent +Group.Siblings**|
+
+`Spawn Order giver`
+
+| #| `HEAR` **Spawn-Order**||
+| ---| ---| ---|
+|| `ORDER CHANGE` **+Activator +Group.Siblings -Activator +[Spawn-Order]**| `SET` **Activator.Order**|
 
 #### Objective Valuer
 
