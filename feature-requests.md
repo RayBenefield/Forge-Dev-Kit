@@ -127,3 +127,5 @@ abstractions
  - **Name Objects** - Please let us name objects for organization sake. These
    names don't have to show up in game outside of forge, but we definitely need
 a way to keep track of objects.
+ - **Activator.Labels** - Allow us to add the labels of the Activator to our
+   objects
