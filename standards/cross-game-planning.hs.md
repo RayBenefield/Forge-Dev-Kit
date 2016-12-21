@@ -243,7 +243,7 @@ setting the sender's number as the respective team.
 #### Handling Team Scoring
 
 I need to look at handling scoring more abstractly based on FFA vs Teams. I can
-probably use the [team_include] and [ffa_include] labels.
+probably use the [team-include] and [ffa-include] labels.
 
 `Team Scoring Trait`
 
@@ -265,6 +265,25 @@ probably use the [team_include] and [ffa_include] labels.
 || `CHANGE` **+This +Group.Siblings +[Scoring]**| `SET` **This**|
 || `CHANGE` **This**| `SET` **0**|
 
+`Value Score with Label on This`
+
+| #| `HEAR` **Score**||
+| ---| ---| ---|
+|| `CHANGE` **This**| `SET` **This.Order**|
+|| `CHANGE` **This**| `MULTIPLY` **+This.Boundary +This.Labels +First -> Count**|
+|| `CHANGE` **+This +Group.Parent +Group.Siblings +[Scoring]**| `SET` **This**|
+|| `CHANGE` **This**| `SET` **0**|
+
+`Exclude from gametype Trait`
+
+| #| `HEAR` **Initialize**||
+| ---| ---| ---|
+|| `CHANGE` **This**| `SET` **Gametype**|
+|| `CHANGE` **This**| `MULTIPLY` **+This +This.Order==This.Number +First -> Count - 1**|
+
+| #| `CHECK` **This < 0**|
+| ---| ---|
+|| `DESPAWN` **+This +Group.Parent +Group.Siblings**|
 
 #### Objective Valuer
 
