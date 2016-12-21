@@ -231,14 +231,39 @@ setting the sender's number as the respective team.
 | ---| ---| ---|
 || `CHANGE` **This**| `SET` **This.Order**|
 || `CHANGE` **This**| `MULTIPLY` **<li>+Activator.Boundary <li>+This.Team <li>-Dead <li>+First -> Count**|
-|| `CHANGE` **Activator**| `INCREMENT` **This**|
+|| `ORDER CHANGE` **+Activator +Group.Siblings -Activator +[Team-Based]**| `SET` **This**|
 
 `Object calling the tagger`
 
 | #| `PLAYERS ENTERS/EXITS/IN`||
 | ---| ---| ---|
-|| `CHANGE` **This**| `SET` **0**|
 || `SEND` **Tag-Team**|
+
+
+#### Handling Team Scoring
+
+I need to look at handling scoring more abstractly based on FFA vs Teams. I can
+probably use the [team_include] and [ffa_include] labels.
+
+`Team Scoring Trait`
+
+ - **Labels** - [Team-Based], [Scoring]
+
+| #| `CHECK` **This > 0**||
+| ---| ---| ---|
+|| `CHANGE` **+[Scorer] +Order==This.Order**| `SET` **This**|
+|| `CHANGE` **This**| `SET` **0**|
+
+`Valued Object that wants Team Scoring`
+
+ - **Spawn Order** - The amount of points this should score
+
+| #| `HEAR` **Score**||
+| ---| ---| ---|
+|| `CHANGE` **This**| `SET` **This.Order**|
+|| `CHANGE` **This**| `MULTIPLY` **+This +[Scoring] -> Count**|
+|| `CHANGE` **+This +Group.Siblings +[Scoring]**| `SET` **This**|
+|| `CHANGE` **This**| `SET` **0**|
 
 
 #### Objective Valuer
