@@ -156,3 +156,12 @@ executing that.
  - **Set highlighted object as Group Parent** - With action filtering, group
    parents have become more important and it would be great to just be able to
 look at an object and hit a button to set as group parent.
+ - **Ignore messages that don't match filter** - When a message is sent, EVERY
+   object executes its actions, regardless of whether or not they care.
+Introducing the ability to ignore messages based on a filter would allow
+patterns where parent objects can relay the message, without re-triggering
+themselves. This would allow them to send themselves as an activator for their
+siblings. If not a condition, then an action to break out of a script if a
+condition is met. For example, on Message Score, the first action could be
+Ignore from This, so that way it can relay the message to Group.Siblings. And
+siblings can ignore any object that isn't the parent.
