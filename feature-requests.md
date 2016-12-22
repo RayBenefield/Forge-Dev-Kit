@@ -140,3 +140,16 @@ chain, just for the parent IE `This[Add] -> Group Parents[Add] -> This[Remove]`
 team of activators, group parents, this, etc. or even a random team this would
 be great. If we had the ability to translate numbers into teams, that would be
 nice to (1 to Red, 2 to Blue, etc.)
+ - **Edit Properties of Highlighted Object** - With grouping becoming more and
+   more important it would be nice to be able to be highlighting an object in a
+group and specifically access that single object's scripts. Right now to do
+that you have to select the group, un-group, deselect the object you want, then
+regroup what's left, then access the object's properties. When you are done you
+have to re-add it to the group and ensure that the parent is still the one you
+want.
+ - **Use action filtering to grab objects spread around the map** - Even though
+   things like paint selecting objects is useful, sometimes it would be nice to
+not have to find the objects. Say I want to find all objects with a
+Forge-Include label and delete them. It would be very nice just to be able to
+Action Filter on Label: Forge-Include and have up to 64 objects grabbed after
+executing that.
