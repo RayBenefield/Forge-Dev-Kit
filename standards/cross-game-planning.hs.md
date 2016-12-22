@@ -261,8 +261,8 @@ probably use the [team-include] and [ffa-include] labels.
 | #| `HEAR` **Score**||
 | ---| ---| ---|
 || `CHANGE` **This**| `SET` **This.Order**|
-|| `CHANGE` **This**| `MULTIPLY` **+This +[Scoring] -> Count**|
-|| `CHANGE` **+This +Group.Siblings +[Scoring]**| `SET` **This**|
+|| `CHANGE` **This**| `MULTIPLY` **+This +[Score] -> Count**|
+|| `CHANGE` **+This +Group.Siblings +[Score]**| `SET` **This**|
 || `CHANGE` **This**| `SET` **0**|
 
 `Value Score with Label on This`
@@ -271,7 +271,7 @@ probably use the [team-include] and [ffa-include] labels.
 | ---| ---| ---|
 || `CHANGE` **This**| `SET` **This.Order**|
 || `CHANGE` **This**| `MULTIPLY` **+Activator.Boundary +This.Labels +First -> Count**|
-|| `CHANGE` **+This +Group.Parent +Group.Siblings +[Scoring]**| `SET` **This**|
+|| `CHANGE` **+This +Group.Parent +Group.Siblings +[Score]**| `SET` **This**|
 || `CHANGE` **This**| `SET` **0**|
 
 `Exclude from gametype Trait`
@@ -289,7 +289,7 @@ probably use the [team-include] and [ffa-include] labels.
 
 | #| `HEAR` **Spawn-Order**||
 | ---| ---| ---|
-|| `ORDER CHANGE` **+Activator +Group.Siblings -Activator +[Spawn-Order]**| `SET` **Activator.Order**|
+|| `ORDER CHANGE` **+Activator +Group.Siblings -Activator +[Child]**| `SET` **Activator.Order**|
 
 #### Objective Valuer
 

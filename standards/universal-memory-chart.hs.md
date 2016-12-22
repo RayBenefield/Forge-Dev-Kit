@@ -14,34 +14,34 @@ discussed amongst the community. An accepted proposal will either be added by a
 contributor, or you can submit your own [pull
 request](https://github.com/RayBenefield/Forge-Dev-Kit/pulls).
 
-|              | Message    | Power        | Global #      | Team # | Player# | Label   | Trait |
-| ---:         | :---:      | :---:        | :---:         | :---:  | :---:   | :---:   | :---: |
-| **Alpha**    |            |              |               |        |         |         |       |
-| **Bravo**    |            |              |               |        |         | Ball    |       |
-| **Charlie**  |            |              | Current-Round |        |         |         |       |
-| **Delta**    |            |              |               |        |         |         |       |
-| **Echo**     |            |              |               |        |         |         |       |
-| **Foxtrot**  |            |              |               |        |         | Flag    |       |
-| **Golf**     |            | Game-Active  |               |        |         |         |       |
-| **Hotel**    | Heartbeat  |              |               |        |         |         |       |
-| **India**    | Initialize |              |               |        |         |         |       |
-| **Juliet**   |            |              |               |        |         |         |       |
-| **Kilo**     |            |              |               |        |         |         |       |
-| **Lima**     |            |              |               |        |         |         |       |
-| **Mike**     |            |              |               |        |         |         |       |
-| **November** |            |              |               |        |         |         |       |
-| **Oscar**    |            |              |               |        |         |         |       |
-| **Papa**     |            |              |               |        |         | Player  |       |
-| **Quebec**   |            |              |               |        |         |         |       |
-| **Romeo**    |            | Round-Active | Round-Number  |        |         |         |       |
-| **Sierra**   | Score      |              |               |        |         |         |       |
-| **Tango**    | Tag-Team   |              |               |        |         |         |       |
-| **Uniform**  |            |              |               |        |         |         |       |
-| **Victor**   | Value      |              | Volatile      |        |         | Vehicle |       |
-| **Whiskey**  |            |              |               |        |         | Weapon  |       |
-| **Xray**     |            |              |               |        |         |         |       |
-| **Yankee**   |            |              |               |        |         |         |       |
-| **Zulu**     |            |              |               |        |         | Zone    |       |
+|              | Message    | Power        | Global #      | Team # | Player# | Label      | Trait |
+| ---:         | :---:      | :---:        | :---:         | :---:  | :---:   | :---:      | :---: |
+| **Alpha**    |            |              |               |        |         |            |       |
+| **Bravo**    |            |              |               |        |         | Ball       |       |
+| **Charlie**  |            |              | Current-Round |        |         | Child      |       |
+| **Delta**    |            |              |               |        |         |            |       |
+| **Echo**     |            |              |               |        |         |            |       |
+| **Foxtrot**  |            |              |               |        |         | Flag       |       |
+| **Golf**     |            | Game-Active  |               |        |         | Gametype   |       |
+| **Hotel**    | Heartbeat  |              |               |        |         |            |       |
+| **India**    | Initialize |              |               |        |         | Invalid    |       |
+| **Juliet**   |            |              |               |        |         |            |       |
+| **Kilo**     |            |              |               |        |         |            |       |
+| **Lima**     |            |              |               |        |         |            |       |
+| **Mike**     |            |              |               |        |         |            |       |
+| **November** |            |              |               |        |         |            |       |
+| **Oscar**    |            |              |               |        |         |            |       |
+| **Papa**     |            |              |               |        |         | Player     |       |
+| **Quebec**   |            |              |               |        |         |            |       |
+| **Romeo**    |            | Round-Active | Round-Number  |        |         | Rate       |       |
+| **Sierra**   | Score      |              |               |        |         | Score      |       |
+| **Tango**    | Tag-Team   |              |               |        |         | Team       |       |
+| **Uniform**  |            |              |               |        |         |            |       |
+| **Victor**   | Value      |              | Volatile      |        |         | Vehicle    |       |
+| **Whiskey**  |            |              |               |        |         | Weapon     |       |
+| **Xray**     |            |              |               |        |         |            |       |
+| **Yankee**   |            |              |               |        |         |            |       |
+| **Zulu**     |            |              |               |        |         | Zone       |       |
 
 
 ## Memory Explanations
