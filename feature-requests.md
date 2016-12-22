@@ -135,3 +135,8 @@ a way to keep track of objects.
 we can abstract boundary logic, without having to make the parent the
 activator. This being available in `Mod 1` also allows us to avoid having to
 chain, just for the parent IE `This[Add] -> Group Parents[Add] -> This[Remove]`
+ - **Force Team Change Action** - This would allow us to replicate infection,
+   and do some pretty cool concepts like player stealing. If we can use the
+team of activators, group parents, this, etc. or even a random team this would
+be great. If we had the ability to translate numbers into teams, that would be
+nice to (1 to Red, 2 to Blue, etc.)
