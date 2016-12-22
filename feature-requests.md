@@ -129,3 +129,9 @@ abstractions
 a way to keep track of objects.
  - **Activator.Labels** - Allow us to add the labels of the Activator to our
    objects
+ - **Group Parent This** - For `Mod 1` of action filtering it would be awesome
+   for an object to act directly on its parent. This includes being able to do
+`THIS Parent Boundary` so we can detect everything in the parent's boundary so
+we can abstract boundary logic, without having to make the parent the
+activator. This being available in `Mod 1` also allows us to avoid having to
+chain, just for the parent IE `This[Add] -> Group Parents[Add] -> This[Remove]`
