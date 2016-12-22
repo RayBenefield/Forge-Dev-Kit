@@ -153,3 +153,6 @@ not have to find the objects. Say I want to find all objects with a
 Forge-Include label and delete them. It would be very nice just to be able to
 Action Filter on Label: Forge-Include and have up to 64 objects grabbed after
 executing that.
+ - **Set highlighted object as Group Parent** - With action filtering, group
+   parents have become more important and it would be great to just be able to
+look at an object and hit a button to set as group parent.
