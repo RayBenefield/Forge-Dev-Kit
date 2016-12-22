@@ -5,7 +5,7 @@ goals and experience. We do this by teaching, enforcing, learning, documenting,
 etc. our experiences with Halo 5's Forge tool. This initiative is headed by
 **Ray Benefield**, a professional Innovation Solutions Architect and veteran
 Software Engineer. The standards that are set by the FDK are strictly managed
-by Ray, following solid software engineering principles to ensure maximum
+by Ray, enforcing solid software engineering principles to ensure maximum
 useability.
 
 
@@ -17,6 +17,10 @@ letter stands for a very particular principle, all of these principles seem to
 fit extremely well in the Forge ecosystem.
 
 ### Single Responsibility Principle
+
+###### References
+
+[The Single Responsibility Principle by Robert "Uncle Bob" Martin](https://www.youtube.com/watch?v=Gt0M_OHKhQE)
 
 
 ### Open/Closed Principle
