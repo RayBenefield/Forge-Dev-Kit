@@ -5,7 +5,7 @@ you solve extremely complex problems in Halo Forge's scripting system.
 
  - [**Traits**](./traits.hs.md) - Add behaviour to objects using other objects
    and grouping
- - [**For Loop**](./for-loop.hs.md) - Looping through an arbitrary amount of
+ - [**For Loops**](./for-loops.hs.md) - Looping through an arbitrary amount of
    objects and do things
  - [**Safe Math**](./safe-math.hs.md) - Do math in Forge without triggering
    unnecessary events

@@ -13,6 +13,7 @@ important than ever.
  - [Overview of Goals](#overview-of-goals)
  - [Inspiration](#inspiration)
  - [Standards](#standards)
+ - [Patterns](#patterns)
  - [Documentation](#documentation)
  - [Tests](#tests)
  - [Design Documents](#design-documents)
@@ -85,10 +86,22 @@ Gametype options, etc.)
 
 These are the documents that define what the standards of the FDK are:
 
- - [Script Template](standards/haloscript-template.hs.md)
- - [Universal Memory Chart](standards/universal-memory-chart.hs.md)
- - [Gametype Checklist](standards/gametype-checklist.hs.md)
- - [Gametype Package](standards/gametype-package.hs.md)
+ - [**Philosophies**](standards/philosophies.hs.md)
+ - [**Script Template**](standards/haloscript-template.hs.md)
+ - [**Universal Memory Chart**](standards/universal-memory-chart.hs.md)
+ - [**Gametype Checklist**](standards/gametype-checklist.hs.md)
+ - [**Gametype Package**](standards/gametype-package.hs.md)
+
+
+## Patterns
+
+These are solutions to complex problems in Forge:
+
+ - [**Traits**](patterns/traits.hs.md)
+ - [**For Loops**](patterns/for-loops.hs.md)
+ - [**Safe Math**](patterns/safe-math.hs.md)
+ - [**Conditional Math**](patterns/conditional-math.hs.md)
+ - [**Group Messaging**](patterns/group-messaging.hs.md)
 
 
 ## Documentation
@@ -96,10 +109,9 @@ These are the documents that define what the standards of the FDK are:
 These are reference documents describing the mechanics of Halo Forge and its
 scripting system:
 
- - [Memory](docs/memory.hs.md)
- - [Debugging](docs/debugging.hs.md)
- - [Patterns](docs/patterns.hs.md)
- - [Refactoring](docs/refactoring.hs.md)
+ - [**Memory**](docs/memory.hs.md)
+ - [**Debugging**](docs/debugging.hs.md)
+ - [**Refactoring**](docs/refactoring.hs.md)
 
 
 ## Tests
@@ -107,23 +119,23 @@ scripting system:
 These are tests you can load up in-game with information, observations, and end
 results:
 
- - [Timer Pattern](tests/timer-pattern.hs.md)
+ - [**Timer Pattern**](tests/timer-pattern.hs.md)
 
 
 ## Design Documents
 
 These are design docunents for FDK approved gametypes:
 
- - [Fury](design-docs/fury.hs.md)
+ - [**Fury**](design-docs/fury.hs.md)
 
 
 ## Prefabs
 
 These are the FDK tools to assist in creating gametypes:
 
- - [Game Manager](prefabs/game-manager.hs.md)
- - [Round Manager](prefabs/round-manager.hs.md)
- - [Round Spawner](prefabs/round-spawner.hs.md)
+ - [**Game Manager**](prefabs/game-manager.hs.md)
+ - [**Round Manager**](prefabs/round-manager.hs.md)
+ - [**Round Spawner**](prefabs/round-spawner.hs.md)
 
 
 ## Collaborators
