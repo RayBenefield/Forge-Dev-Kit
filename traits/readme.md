@@ -1,1 +1,1 @@
-../standards/patterns/traits.hs.md
+../patterns/traits.hs.md
