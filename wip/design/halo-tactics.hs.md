@@ -16,9 +16,9 @@
 
 ```
 if (PlayerTeamID === RelativeTurn) {
-    player.getActiveTrait
+    player.getActiveAspect
 } else {
-    player.clearTraits
+    player.clearAspects
 }
 
 if (PlayerDies) {
@@ -68,7 +68,7 @@ if (PlayerDies) {
 
 ## Memory Chart
 
-|              | Message      | Power          | Global #        | Team # | Player# | Label | Trait   |
+|              | Message      | Power          | Global #        | Team # | Player# | Label | Aspect   |
 | ---:         | :---:        | :---:          | :---:           | :---:  | :---:   | :---: | :---:   |
 | **Alpha**    |              |                |                 |        |         |       |         |
 | **Bravo**    |              |                |                 |        |         |       |         |
@@ -180,7 +180,7 @@ Manages the Players in the game.
 ###### Scripts
 
 > - If My Turn then set as Active
-> - If Not My Turn then Remove Active Trait
+> - If Not My Turn then Remove Active Aspect
 
 | #1| `CHECK` Max-Team-Size > 0||
 | ---| ---| ---|

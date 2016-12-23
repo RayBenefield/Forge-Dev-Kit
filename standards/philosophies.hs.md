@@ -42,7 +42,7 @@ a parent). However the value that is learned from this principle in terms of
 how Composition can make our objects better is astronomical. The idea is that
 rather than inheriting behaviour from "being" something, insteaad behaviour is
 given by "having" something. This concept is enforced by the use of
-[Traits](../traits). These traits are responsible for a single
+[Aspects](../aspects). These aspects are responsible for a single
 capability/behaviour of an object and manages everything related to that skill.
 
 

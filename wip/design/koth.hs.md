@@ -10,11 +10,11 @@ every `X` seconds in a sequential order.
  - **Team Tagger** - Responds to **Tag** messages by setting the team for
    objects
  - **Standard Zone**
-     - [**Held By Team**](../traits/held-by-team.hs.md) - Denotes the hill as
+     - [**Held By Team**](../aspects/held-by-team.hs.md) - Denotes the hill as
        being held by a specific team
-     - [**Simple Scoring**](../traits/score-once.hs.md) - For every score
+     - [**Simple Scoring**](../aspects/score-once.hs.md) - For every score
        event, add `1`
-     - [**Contestable**](../traits/contestable.hs.md) - Multiple teams in the
+     - [**Contestable**](../aspects/contestable.hs.md) - Multiple teams in the
        hill sets the hill to being **[Invalid]** and unable to score points
-     - [**Order Spawning**](../traits/order-spawning.hs.md) - Multiple teams in the
+     - [**Order Spawning**](../aspects/order-spawning.hs.md) - Multiple teams in the
        hill sets the hill to being **[Invalid]** and unable to score points

@@ -97,7 +97,7 @@ These are the documents that define what the standards of the FDK are:
 
 These are solutions to complex problems in Forge:
 
- - [**Traits**](patterns/traits.hs.md)
+ - [**Aspects**](patterns/aspects.hs.md)
  - [**For Loops**](patterns/for-loops.hs.md)
  - [**Safe Math**](patterns/safe-math.hs.md)
  - [**Conditional Math**](patterns/conditional-math.hs.md)

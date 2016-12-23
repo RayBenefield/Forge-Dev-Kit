@@ -3,7 +3,7 @@
 Patterns refer to a particular way to solve a problem. These patterns can help
 you solve extremely complex problems in Halo Forge's scripting system.
 
- - [**Traits**](./traits.hs.md) - Add behaviour to objects using other objects
+ - [**Aspects**](./aspects.hs.md) - Add behaviour to objects using other objects
    and grouping
  - [**For Loops**](./for-loops.hs.md) - Looping through an arbitrary amount of
    objects and do things

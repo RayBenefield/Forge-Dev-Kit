@@ -1,4 +1,4 @@
-# On Team Trait
+# On Team Aspect
 
 Designates that the group parent belongs to a specific team.
 
