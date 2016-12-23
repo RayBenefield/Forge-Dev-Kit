@@ -1,3 +1,11 @@
+<p align="center">
+    <a href="https://github.com/RayBenefield/Forge-Dev-Kit">
+        <img src="images/logo-black-400x249.png" alt="Forge Dev Kit"/>
+    </a>
+    <br />
+    <sub><em>Logo courtesy of <a href="https://www.linkedin.com/in/ACoAABSukNQBFG3qSrL7DzoXFWf0lDJ70g6Yy-w/">Carson Barry</a></em></sub>
+</p>
+
 # Halo Forge Development Kit [Halo FDK]
 
 Welcome to the Halo FDK. With the release of the Monitor's Bounty update,
