@@ -182,3 +182,11 @@ between scripts. Right now to accomplish this I use a local variable set, and
 an additional check to verify if the local variable passes, then continue with
 this flow, if not then it triggers nothing. It would be great to just say if
 this matches then leave this script and don't execute any more actions.
+ - **Number Check another Object** - It would be nice to be able to watch the
+   local object variable of another object. For example, the parent as it would
+be valuable in accessing the parent changing through `EXTRA`.
+ - **Activator of Number Check** - Since objects can change the numbers of
+   other objects, we should be able to grab the activator that triggered that
+number change. This would be useful as a messaging protocol as well. Like the
+parent changing the variable of a sibling, and using that `ACTIVATOR` to gain
+access to the parent's properties.
