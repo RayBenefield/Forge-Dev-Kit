@@ -165,3 +165,8 @@ siblings. If not a condition, then an action to break out of a script if a
 condition is met. For example, on Message Score, the first action could be
 Ignore from This, so that way it can relay the message to Group.Siblings. And
 siblings can ignore any object that isn't the parent.
+ - **Change Group Action** - With as powerful as grouping is now, being able to
+   add entities (objects, players, weapons, etc.) to a group or remove them
+from a group would be very useful. So you can say tie a Player to a Zone and
+then the player can a part of siblings, or it could even be made the parent. So
+group parent management would be great as well.
