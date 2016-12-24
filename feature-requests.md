@@ -176,3 +176,9 @@ or something to be able act as parameters. For example I could send a message
 of Score (sierra) with a number of 2 to score for the Blue Team. Message
 receivers would then check to see if the parameters meets their needs, and if
 not... ignore the message.
+ - **Cancel a script** - Sometimes you want to be able to cancel running a
+   script if a certain condition is met. This would mean a lot less jumping
+between scripts. Right now to accomplish this I use a local variable set, and
+an additional check to verify if the local variable passes, then continue with
+this flow, if not then it triggers nothing. It would be great to just say if
+this matches then leave this script and don't execute any more actions.
