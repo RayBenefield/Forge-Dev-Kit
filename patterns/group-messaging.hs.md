@@ -24,6 +24,19 @@ activator. If removing the activator results in no objects left then that was
 our parent, otherwise the activator was not our parent so we want to return 0
 to invalidate future calculations.
 
+**NOTE**: If the object has NO parent (not in a group), this will still trigger
+as if it received a message from its parent, as such it will be effected by ALL
+messages of this type.
+
+**NOTE**: The parent must be sending itself as the activator for group
+messaging to properly recognize messages from the parent. Otherwise it will add
+its parent and not filter out its parent as the activator.
+
+**TODO**: Analyze the effects of the message activator being the actual
+activator (of like a boundary check). This could allow boundary checks to
+trigger parent based messages on the objects entering the boundary of the
+message sender (so a flag entering a zone can have the zone, send a message to
+the flags children as if the flag had sent it).
 
 ## Message from This.Sibling
 
