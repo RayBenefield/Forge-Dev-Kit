@@ -170,3 +170,9 @@ siblings can ignore any object that isn't the parent.
 from a group would be very useful. So you can say tie a Player to a Zone and
 then the player can a part of siblings, or it could even be made the parent. So
 group parent management would be great as well.
+ - **Send Parameters with Messages** - Like a normal function call in
+   programming, it would be great to be able to pass along a variable, number,
+or something to be able act as parameters. For example I could send a message
+of Score (sierra) with a number of 2 to score for the Blue Team. Message
+receivers would then check to see if the parameters meets their needs, and if
+not... ignore the message.
