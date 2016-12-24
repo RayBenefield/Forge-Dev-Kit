@@ -28,7 +28,7 @@ request](https://github.com/RayBenefield/Forge-Dev-Kit/pulls).
 | **Juliet**   |                |              |               |        |         |          |       |
 | **Kilo**     |                |              |               |        |         |          |       |
 | **Lima**     |                |              |               |        |         |          |       |
-| **Mike**     |                |              |               |        |         |          |       |
+| **Mike**     |                |              |               |        |         | Mutator  |       |
 | **November** |                |              |               |        |         |          |       |
 | **Oscar**    |                |              |               |        |         |          |       |
 | **Papa**     |                |              |               |        |         | Player   |       |
