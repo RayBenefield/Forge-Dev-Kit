@@ -1,1 +1,0 @@
-../patterns/traits.hs.md
