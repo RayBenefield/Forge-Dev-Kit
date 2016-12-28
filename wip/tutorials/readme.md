@@ -1,0 +1,64 @@
+# How does Forge work
+
+ - Selecting a Map to Forge on
+ - Movement/Navigation
+     - Speed
+ - HUD
+     - Speed/Movement Type/etc.
+     - Buttons
+     - Budgets
+ - Object Creation Menu
+ - Properties Menus
+     - Map Properties
+         - Weather
+         - Fog
+     - Tool Properties
+     - Object Properties
+ - Object Manipulation
+     - Translation
+     - Rotation
+     - Duplication
+     - Deletion
+     - Grouping
+     - Welding
+ - Object Settings
+     - Respawn
+     - Despawn
+     - Spawn Order
+ - Magnets: How do they work?
+ - Prefabs
+     - Limitations
+     - Must be a group
+ - Physics
+     - Normal/Fixed/Phased
+     - Joints
+ - Object Categories
+ - Spawn Points
+ - Weapons/Grenades/Weapon Pads
+ - Labels
+ - Game Modes
+ - Spawn Order
+ - Coloring
+     - Reference Colors
+     - Materials
+     - Overlays
+ - Cinematics
+ - Lighting
+ - Scripting
+     - Conditions
+     - Actions
+     - Settings
+         - Condition Interrupt
+         - Round Interrupt
+         - Always Run
+     - Memory
+         - Messages
+         - Power
+         - Number
+             - Global
+             - Team
+             - Player
+             - Object
+         - Labels
+     - Filters
+     - This, Activator, Extra
