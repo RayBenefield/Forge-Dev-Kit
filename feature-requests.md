@@ -190,3 +190,6 @@ be valuable in accessing the parent changing through `EXTRA`.
 number change. This would be useful as a messaging protocol as well. Like the
 parent changing the variable of a sibling, and using that `ACTIVATOR` to gain
 access to the parent's properties.
+ - **Boundary Show/Change Action** - We want to be able to show and unshow the
+   boundary, and it would also be nice if we could change the size of the
+boundary as well.
