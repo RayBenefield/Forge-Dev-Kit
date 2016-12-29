@@ -8,6 +8,25 @@ and 120 seconds, then that should be buildable as a aspect prefab that can be
 used on any object.
 
 
+## Inspiration
+
+Aspects are inspired by **Traits** in programming languages. Traits are
+implementations of behaviour that can be "mixed-in" to an object, giving that
+object that behaviour. This behaviour would allow objects of many types to have
+new functionality. Because **Traits** would become an overloaded term thanks to
+**Player Traits**. A name change was proposed and I decided to go with
+**Aspects**.
+
+Which is actually interesting because if you know what Aspect Oriented
+Programming (AOP) is, it is very similar to that. Aspects in AOP are bits of
+cross cutting concern logic... things like logging, debugging, caching,
+security, etc. These things are cross cutting because they are things that we
+would use in 90+% of domains. There is a particular concept of applying Aspects
+to code that matches a Point Cut query... these queries are actually very
+similar to our filter system in Forge. Basically if an object meets X amounts
+of requirements then it gets this bit of code tied to it.
+
+
 ## How they work
 
 Aspects use a magical part of the Forge system that I've observed to be very
