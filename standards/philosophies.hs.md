@@ -56,3 +56,28 @@ powerful model. Our standards are strongly influenced by the fact that Objects
 should not know every single object that cares about this. This also ensures
 that any amount of subscribers can be a part of the event rather than the 1 or
 2 that were initially planned.
+
+
+## Polymorphism
+
+Polymorphism is the ability to get different kinds of behaviour based on a call
+to a "function", without changing the call. Basically if on a single object I'm
+able to set a "thing's" Number and expect it to change the score of the team
+while not specifically calling that thing, that thing can be represented by
+many different implementations. Perhaps you are sending what type of object
+passes through a boundary, you could have an object that gives 5 points if its
+a player. You could have another object that swaps out that gives 10 points if
+it is a player. You could have another object that swaps out for that that
+gives 10 points if it is an object AND 5 points if it is the right type. Or
+none if it has other types. All of this can be done if you don't directly call
+the object that handles the scoring.
+
+How can we do this in Forge? We use the filtering system to look for
+"characteristics" of objects. I prefer to use something like **+Group.Siblings
++[Label]**. This allows me to say, find an object that is my child and is
+labeled as a **[Scorer]** and give them this number that represents the type of
+object that entered my boundary. Now to swap out functionality we only have to
+have an object that has that label and is grouped to that parent object and it
+serves the same purpose but does it differently. Even better with filters you
+can apply this to multiple objects of that "interface" and score in different
+ways. This is a powerful technique that we can use to our advantage.
